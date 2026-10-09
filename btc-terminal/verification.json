@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-09-21T06:46:25.641536+00:00",
+  "contract": "GEMI-BTC05M2609210650-UP",
+  "bid_levels": 5,
+  "ask_levels": 1,
+  "messages": 12,
+  "reference": "81556.39444444444",
+  "book_updates": 2,
+  "reconnects": 0
+}
