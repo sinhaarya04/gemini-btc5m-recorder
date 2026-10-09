@@ -1,0 +1,37 @@
+{
+  "as_of_utc": "2026-09-21T05:26:40.203054+00:00",
+  "bucket": "gemini-btc5m-raw",
+  "project_ref": "dtgciwhecaqwnddzepiz",
+  "files_verified": 5,
+  "records_verified": 922,
+  "counts": {
+    "collector_start": 2,
+    "collector_status": 9,
+    "event_metadata": 233,
+    "contract_rules": 2,
+    "connection_start": 11,
+    "depthUpdate": 213,
+    "ws_reply": 11,
+    "bookTicker": 171,
+    "thirdPartyPrice": 249,
+    "connection_end": 6,
+    "collector_stop": 1,
+    "trade": 9,
+    "contractStatus": 5
+  },
+  "sessions": {
+    "5d96e23060a94e528325bcd5cdc445eb": 312,
+    "91dbde93c632423a8fee0f6959b44824": 610
+  },
+  "settled_contracts": [
+    "BTC05M2609210525"
+  ],
+  "first_record_utc": "2026-09-21T05:22:02.982928+00:00",
+  "last_record_utc": "2026-09-21T05:26:16.213450+00:00",
+  "unauthenticated_read_status": 400,
+  "automated_tests_passed": 8,
+  "fly_app": "gemini-btc5m-recorder-aryan",
+  "fly_machine": "859160f4419e58",
+  "fly_region": "iad",
+  "local_test_recorder_stopped": true
+}

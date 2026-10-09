@@ -1,0 +1,27 @@
+app = "gemini-btc5m-recorder-aryan"
+primary_region = "iad"
+kill_signal = "SIGTERM"
+kill_timeout = "30s"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  DATA_DIR = "/data"
+  SUPABASE_BUCKET = "gemini-btc5m-raw"
+  DISCOVERY_SECONDS = "15"
+  ROTATE_SECONDS = "60"
+
+[[mounts]]
+  source = "recorder_data"
+  destination = "/data"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "2gb"
+
+[[restart]]
+  policy = "always"
+
+# Background worker: no HTTP service, public port or Fly Proxy autostop.
