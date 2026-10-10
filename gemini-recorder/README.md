@@ -8,13 +8,13 @@ This worker records public Gemini BTC05M prediction-market data continuously. It
 - Region: `iad` (Virginia)
 - Machine: `859160f4419e58`, one shared CPU, 2 GB RAM
 - Encrypted persistent volume: `recorder_data`, 10 GB
-- Supabase organization: `E[X]`
-- Supabase project: `dtgciwhecaqwnddzepiz` (the existing active project)
+- Supabase organization: `pmarkets`
+- Supabase project: `btc-data` (`vhfqgyzrmbhsvtpynypi`), dedicated to this recorder. On October 10, 2026 the archive moved here from `dtgciwhecaqwnddzepiz` in the `E[X]` organization; all 28,278 earlier files were copied and size-verified
 - Private Storage bucket: `gemini-btc5m-raw`
 - Production files: `btc5m/YYYY-MM-DD/*.jsonl.gz`
 - Local validation recordings, if uploaded: `validation/YYYY-MM-DD/*.jsonl.gz`
 
-[Fly monitoring](https://fly.io/apps/gemini-btc5m-recorder-aryan/monitoring) · [Supabase project](https://supabase.com/dashboard/project/dtgciwhecaqwnddzepiz/storage/buckets)
+[Fly monitoring](https://fly.io/apps/gemini-btc5m-recorder-aryan/monitoring) · [Supabase project](https://supabase.com/dashboard/project/vhfqgyzrmbhsvtpynypi/storage/buckets)
 
 Fly Secrets holds the Supabase URL and backend credential. No credential is embedded in the source or container image. The bucket is private. Existing apps, buckets and database tables were not modified. In this first version, metadata and outcomes are included in the raw files; an on-volume SQLite catalog tracks pending settlements. No Supabase database tables are required.
 
